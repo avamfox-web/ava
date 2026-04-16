@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ava's Piano Corner</title>
+  <link rel="stylesheet" href="scratch.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAV back to professional page -->
+  <nav id="top-nav">
+    <a href="index.html">← Back to Portfolio</a>
+    <span>|</span>
+    <a href="app.html">🎮 My Web App</a>
+  </nav>
+
+  <!-- HERO -->
+  <header id="hero">
+    <div id="hero-content">
+      <h1>The Piano & Me</h1>
+      <p class="subtitle">A love letter to the keys</p>
+      <a href="#about-piano" class="anchor-btn">Explore ↓</a>
+    </div>
+  </header>
+
+  <!-- ON-PAGE ANCHOR TARGET -->
+  <section id="about-piano" class="section">
+    <div class="container">
+      <h2>Why I Love the Piano</h2>
+      <p>
+        The piano has always felt like a second language to me — one I can speak even when words fall short.
+        There's something incredibly grounding about sitting at a keyboard and letting your fingers find the notes.
+        Whether I'm working through a technical piece or just improvising, the piano brings me back to myself.
+      </p>
+      <p>
+        My absolute favorite piece is <strong>Nocturne Op. 9 No. 2 in E♭ Major</strong> by Frédéric Chopin.
+        It's tender, melancholic, and impossibly beautiful — everything a piece of music should be.
+      </p>
+    </div>
+  </section>
+
+  <!-- IMAGE SECTION -->
+  <section id="image-section" class="section alt-bg">
+    <div class="container">
+      <h2>The Instrument</h2>
+      <div id="piano-img-wrap">
+        <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=900&q=80" alt="A grand piano" id="piano-img"/>
+        <p class="caption">A grand piano — the most expressive instrument ever built.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- YOUTUBE VIDEO -->
+  <section id="video-section" class="section">
+    <div class="container">
+      <h2>Listen: Nocturne Op. 9 No. 2 — Chopin</h2>
+      <p>My all-time favorite piece. Close your eyes and let it wash over you.</p>
+      <div id="video-wrap">
+        <iframe
+          width="100%"
+          height="450"
+          src="https://www.youtube.com/embed/9E6b3swbnWg"
+          title="Chopin Nocturne Op. 9 No. 2"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- NESTED LISTS -->
+  <section id="lists-section" class="section alt-bg">
+    <div class="container">
+      <h2>My Piano Journey</h2>
+      <p>Here's an overview of where I've been and what I've explored:</p>
+
+      <!-- ORDERED list with UNORDERED lists nested inside -->
+      <ol id="journey-list">
+        <li>
+          <strong>Beginner Years</strong>
+          <ul>
+            <li>Learning hand position and posture</li>
+            <li>Simple scales and finger exercises</li>
+            <li>First songs: "Mary Had a Little Lamb," "Ode to Joy"</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Intermediate Stage</strong>
+          <ul>
+            <li>Sight-reading sheet music</li>
+            <li>Learning dynamics: piano, forte, crescendo</li>
+            <li>Exploring classical composers: Bach, Beethoven, Mozart</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Falling in Love with Chopin</strong>
+          <ul>
+            <li>Discovering the Nocturnes</li>
+            <li>Working on Op. 9 No. 2 — my favorite piece</li>
+            <li>Learning about Romantic era music history</li>
+          </ul>
+        </li>
+        <li>
+          <strong>What I Want to Learn Next</strong>
+          <ul>
+            <li>Debussy's Clair de Lune</li>
+            <li>Improvisation and jazz harmony</li>
+            <li>Composing my own pieces</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- TABLEAU EMBED -->
+  <section id="tableau-section" class="section">
+    <div class="container">
+      <h2>Classical Music by the Numbers</h2>
+      <p>An interactive visualization of classical music data — explore the world of classical composers and their works.</p>
+      <div id="tableau-wrap">
+        <div class='tableauPlaceholder' id='viz1' style='position:relative; width:100%; height:520px;'>
+          <noscript>
+            <a href='#'>
+              <img alt='Classical Music Dashboard' src='https://public.tableau.com/static/images/Cl/ClassicalMusicComposers/Dashboard1/1_rss.png' style='border: none'/>
+            </a>
+          </noscript>
+          <object class='tableauViz' style='display:none; width:100%; height:520px;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
+            <param name='embed_code_version' value='3'/>
+            <param name='site_root' value=''/>
+            <param name='name' value='ClassicalMusicComposers/Dashboard1'/>
+            <param name='tabs' value='no'/>
+            <param name='toolbar' value='yes'/>
+            <param name='animate_transition' value='yes'/>
+            <param name='display_static_image' value='yes'/>
+            <param name='display_spinner' value='yes'/>
+            <param name='display_overlay' value='yes'/>
+            <param name='display_count' value='yes'/>
+            <param name='language' value='en-US'/>
+          </object>
+        </div>
+        <script type='text/javascript'>
+          var divElement = document.getElementById('viz1');
+          var vizElement = divElement.getElementsByTagName('object')[0];
+          vizElement.style.width = '100%';
+          vizElement.style.height = '520px';
+          var scriptElement = document.createElement('script');
+          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+          vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANCHOR LINKS DEMO / QUICK NAV -->
+  <section id="quick-nav-section" class="section alt-bg">
+    <div class="container">
+      <h2>Jump Around This Page</h2>
+      <p>Use these anchor links to navigate:</p>
+      <div id="anchor-links">
+        <a href="#about-piano" class="anchor-pill">About Piano</a>
+        <a href="#image-section" class="anchor-pill">The Instrument</a>
+        <a href="#video-section" class="anchor-pill">Watch & Listen</a>
+        <a href="#lists-section" class="anchor-pill">My Journey</a>
+        <a href="#tableau-section" class="anchor-pill">Data Viz</a>
+        <a href="#top-nav" class="anchor-pill">Back to Top</a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="scratch-footer">
+    <p>Made with 🎹 by Ava Fox &nbsp;·&nbsp; <a href="index.html">Back to Portfolio</a> &nbsp;·&nbsp; <a href="app.html">Web App</a></p>
+  </footer>
+
+</body>
+</html>

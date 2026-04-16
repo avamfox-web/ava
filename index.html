@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ava Fox | Portfolio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --cream: #FAF7F2;
+      --charcoal: #2C2C2C;
+      --accent: #B5936A;
+      --soft: #E8E0D5;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Jost', sans-serif;
+      background-color: var(--cream);
+      color: var(--charcoal);
+    }
+
+    /* NAV */
+    nav.navbar {
+      background-color: var(--charcoal) !important;
+      padding: 1.2rem 2rem;
+    }
+    .navbar-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      color: var(--cream) !important;
+      letter-spacing: 2px;
+    }
+    .nav-link {
+      color: var(--soft) !important;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-left: 1rem;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--accent) !important; }
+
+    /* HERO */
+    .hero {
+      background-color: var(--charcoal);
+      color: var(--cream);
+      padding: 100px 0 80px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4.5rem;
+      font-weight: 300;
+      letter-spacing: 6px;
+    }
+    .hero p {
+      font-size: 0.95rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-top: 0.5rem;
+    }
+    .hero .btn-outline-light {
+      border-color: var(--accent);
+      color: var(--accent);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      padding: 10px 28px;
+      margin-top: 1.5rem;
+      border-radius: 0;
+      transition: all 0.3s;
+    }
+    .hero .btn-outline-light:hover {
+      background-color: var(--accent);
+      color: var(--charcoal);
+    }
+
+    /* SECTIONS */
+    section { padding: 70px 0; }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 300;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+    .section-rule {
+      width: 50px;
+      border-top: 2px solid var(--accent);
+      margin-bottom: 2.5rem;
+    }
+
+    /* ABOUT */
+    #about { background-color: var(--cream); }
+    .about-text {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: #555;
+      max-width: 620px;
+    }
+    .about-stat {
+      border-left: 3px solid var(--accent);
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .about-stat .num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      color: var(--charcoal);
+    }
+    .about-stat .label {
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    /* RESUME */
+    #resume { background-color: var(--soft); }
+    .resume-card {
+      background: var(--cream);
+      border: none;
+      border-left: 3px solid var(--accent);
+      border-radius: 0;
+      padding: 1.5rem 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+    .resume-card h5 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      margin-bottom: 0.1rem;
+    }
+    .resume-card .role {
+      font-size: 0.8rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    .resume-card .dates {
+      font-size: 0.8rem;
+      color: #888;
+      float: right;
+    }
+    .resume-card ul {
+      margin: 0.5rem 0 0;
+      padding-left: 1.2rem;
+      font-size: 0.92rem;
+      color: #555;
+    }
+    .skill-badge {
+      display: inline-block;
+      background: var(--charcoal);
+      color: var(--cream);
+      font-size: 0.75rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      margin: 4px;
+    }
+
+    /* CONTACT */
+    #contact { background-color: var(--charcoal); color: var(--cream); text-align: center; }
+    #contact .section-title { color: var(--cream); }
+    .social-link {
+      color: var(--soft);
+      font-size: 1.5rem;
+      margin: 0 12px;
+      transition: color 0.2s;
+    }
+    .social-link:hover { color: var(--accent); }
+    .contact-email {
+      font-size: 0.95rem;
+      letter-spacing: 2px;
+      color: var(--accent);
+      margin-bottom: 2rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #1a1a1a;
+      color: #666;
+      text-align: center;
+      padding: 1.2rem;
+      font-size: 0.78rem;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">AVA FOX</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon" style="filter:invert(1)"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resume">Résumé</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="scratch.html">More About Me</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1>Ava Fox</h1>
+      <p>Experience Design Management &nbsp;·&nbsp; BYU</p>
+      <a href="#resume" class="btn btn-outline-light">View Résumé</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+      <div class="section-rule"></div>
+      <div class="row align-items-center">
+        <div class="col-md-7">
+          <p class="about-text">
+            I'm a Business student at Brigham Young University pursuing a Bachelor of Science with an emphasis in Experience Design Management and a Minor in Life Science. With a 4.0 GPA, I bring the same precision and care to everything I do — from leading shifts at The Fox Market to teaching kids tennis and swimming at the Salt Lake Tennis and Health Club.
+          </p>
+          <p class="about-text mt-3">
+            I'm fluent in French, passionate about creating meaningful experiences for people, and committed to giving back through years of volunteer service. I'm always looking for new ways to grow, connect, and contribute.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <div class="row mt-4 mt-md-0">
+            <div class="col-6">
+              <div class="about-stat">
+                <div class="num">4.0</div>
+                <div class="label">GPA</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="about-stat">
+                <div class="num">3+</div>
+                <div class="label">Years Experience</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="about-stat">
+                <div class="num">7+</div>
+                <div class="label">Years Volunteering</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="about-stat">
+                <div class="num">2</div>
+                <div class="label">Languages</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section id="resume">
+    <div class="container">
+      <h2 class="section-title">Résumé</h2>
+      <div class="section-rule"></div>
+
+      <div class="row">
+        <!-- LEFT COL -->
+        <div class="col-md-6">
+          <h4 class="mb-3" style="font-family:'Cormorant Garamond',serif; letter-spacing:2px; font-size:1.1rem; text-transform:uppercase; color:var(--accent);">Education</h4>
+
+          <div class="resume-card">
+            <span class="dates">Apr 2031</span>
+            <h5>Brigham Young University</h5>
+            <div class="role">B.S. Business — Experience Design Management</div>
+            <ul>
+              <li>Minor in Life Science</li>
+              <li>GPA: 4.0</li>
+              <li>Opportunity Scholarship</li>
+              <li>Seal of Biliteracy — French</li>
+            </ul>
+          </div>
+
+          <h4 class="mb-3 mt-4" style="font-family:'Cormorant Garamond',serif; letter-spacing:2px; font-size:1.1rem; text-transform:uppercase; color:var(--accent);">Skills</h4>
+          <div>
+            <span class="skill-badge">French Language</span>
+            <span class="skill-badge">Food Handler Certified</span>
+            <span class="skill-badge">Certified Manager</span>
+            <span class="skill-badge">Customer Service</span>
+            <span class="skill-badge">Team Leadership</span>
+            <span class="skill-badge">Experience Design</span>
+          </div>
+        </div>
+
+        <!-- RIGHT COL -->
+        <div class="col-md-6 mt-4 mt-md-0">
+          <h4 class="mb-3" style="font-family:'Cormorant Garamond',serif; letter-spacing:2px; font-size:1.1rem; text-transform:uppercase; color:var(--accent);">Experience</h4>
+
+          <div class="resume-card">
+            <span class="dates">Feb 2024 – Present</span>
+            <h5>The Fox Market</h5>
+            <div class="role">Shift Lead · Holladay, UT</div>
+            <ul>
+              <li>Organized store merchandise displays and managed backstock</li>
+              <li>Handled and managed cash box during shifts and closing</li>
+              <li>Assisted customers and influenced sales on the floor</li>
+              <li>Managed food items from salads to pastries and ice cream</li>
+              <li>Processed transactions and returns</li>
+            </ul>
+          </div>
+
+          <div class="resume-card">
+            <span class="dates">Nov 2023 – Apr 2025</span>
+            <h5>Interform Warehouse</h5>
+            <div class="role">Employee · Centerville, UT</div>
+            <ul>
+              <li>Assembled acrylic signs and magnet boards</li>
+              <li>Packaged signs and products for shipment</li>
+            </ul>
+          </div>
+
+          <div class="resume-card">
+            <span class="dates">May – Aug 2021</span>
+            <h5>Salt Lake Tennis and Health Club</h5>
+            <div class="role">Youth Camp Counselor · Salt Lake City, UT</div>
+            <ul>
+              <li>Taught tennis and swimming to kids ages 5–12</li>
+              <li>Cared for all children in the camp's care</li>
+            </ul>
+          </div>
+
+          <h4 class="mb-3 mt-4" style="font-family:'Cormorant Garamond',serif; letter-spacing:2px; font-size:1.1rem; text-transform:uppercase; color:var(--accent);">Volunteer</h4>
+          <div class="resume-card">
+            <span class="dates">Jun 2018 – Jul 2025</span>
+            <h5>St. Vincent de Paul Dining Hall</h5>
+            <div class="role">Volunteer · Salt Lake City, UT</div>
+            <ul>
+              <li>Served food for the homeless</li>
+              <li>Cleaned dishes and the kitchen</li>
+              <li>Cooked and prepared food for mass meal production</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="section-rule" style="margin: 0 auto 2rem;"></div>
+      <p class="contact-email">avamfox@gmail.com</p>
+      <div>
+        <a href="mailto:avamfox@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://linkedin.com/in/ava-fox-530a54386/" class="social-link" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/avamfox-web" class="social-link" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ava Fox &nbsp;·&nbsp; Built with Bootstrap</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
